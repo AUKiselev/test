@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "stylelint-config-rational-order-fix",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recommended-vue/scss"
+  ],
+  "plugins": [
+		"stylelint-order",
+    "stylelint-scss"
+	],
+  "overrides": [
+    {
+      "files": ["*.vue", "**/*.vue"],
+      "rules": {}
+    }
+  ]
+}
