@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import type { BaseButtonProps } from './types';
+
+const props = withDefaults(defineProps<BaseButtonProps>(), {
+  type: 'button',
+});
 const emit = defineEmits<{
   (e: 'click'): void;
 }>();
@@ -10,7 +15,7 @@ const clickHandler = () => {
 
 <template>
   <div class="base-button-component">
-    <button type="button" class="base-button" @click.prevent="clickHandler">
+    <button :type="props.type" class="base-button" @click.prevent="clickHandler">
       <slot />
     </button>
   </div>

@@ -80,7 +80,7 @@ const submitForm = async () => {
         :error="authForm.password.error"
         @focus="clearError('password')"
       />
-      <BaseButton class="submit-button" @click="submitForm">
+      <BaseButton class="submit-button" type="submit" @click="submitForm">
         Sign in
       </BaseButton>
     </form>
